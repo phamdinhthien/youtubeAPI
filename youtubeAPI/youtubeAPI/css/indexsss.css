@@ -1,0 +1,240 @@
+﻿/* CSS Document */
+
+body {
+    background: #2c3e50;
+    overflow-x: hidden;
+}
+/*-----------------------*/
+/*--------contain frame---------------*/
+/*-----------------------*/
+.container-videos {
+    position: relative;
+    left: 18%;
+    top: 0px;
+    display: grid;
+    grid-template-columns: 15% 50%;
+    height: 100vh;
+}
+/*-----------------------*/
+/*---------lists of video on the left--------------*/
+/*-----------------------*/
+#list-of-videos {
+    background: white;
+    padding: 10px;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius:6px;
+}
+/*-----------------------*/
+/*---------present the video choosed from lists(on the right)--------------*/
+/*-----------------------*/
+#container-show-video {
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-top-right-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+
+#container-show-video .brand {
+        width: 45px;
+    }
+
+       #container-show-video .brand h1 {
+            position: absolute;
+            left: 43%;
+            color: white;
+            display: block;
+            font-size: 40px;
+        }
+
+        #container-show-video .brand span {
+            display: inline-block;
+            animation: video 2s linear infinite;
+        }
+
+@keyframes video {
+    0% {
+        transform: translateY(0);
+        margin-left: 0px;
+        color: #bdc3c7;
+    }
+
+    25% {
+        transform: translateY(-15px);
+        margin-left: 10px;
+        color: #FFFF00;
+        text-shadow: 0 0 10px #FFFF00, 0 15px 5px #333,0 15px 7px #333;
+    }
+
+    100% {
+        transform: translateY(0px);
+        color: #bdc3c7;
+    }
+}
+
+#container-show-video .brand span:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+#container-show-video .brand span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+#container-show-video .brand span:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+/*.container-show-video .brand h1:hover{
+	
+	}
+    */
+/*-----------------------*/
+/*--------one video in lists---------------*/
+/*-----------------------*/
+.one-video {
+    margin-bottom: 10px;
+    width: 105%;
+    cursor: pointer;
+    position: relative;
+}
+
+   
+
+    .one-video p {
+        opacity: 0;
+        position: absolute;
+        bottom: -20px;
+        margin: 5px;
+        color: white;
+        transition: 0.5s;
+        z-index: 999;
+    }
+    .one-video::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 0.5em;
+        z-index: 99;
+    }
+
+    .one-video:hover p {
+        opacity: 1;
+        bottom: 0px;
+    }
+
+    .one-video:hover:before {
+        background: -webkit-linear-gradient(top, #ffffff66, #000000a6);
+    }
+
+  
+.show-video {
+    display: none;
+    padding-top: 2%;
+    margin-left: 2%;
+}
+
+/*----------info + lyric of video Part-------------*/
+.info-video {
+    position: relative;
+    width: 100%;
+}
+    /*-----------------------*/
+    /*----------lyric of the song video-------------*/
+    /*-----------------------*/
+    .info-video .lyric {
+        overflow-y: scroll;
+        height: 220px;
+        border-left: 1px solid #0000005c;
+        padding-left: 5px;
+        margin-top: 5px;
+        border-top: 1px solid #0000005c;
+        display: none;
+    }
+/*-----------------------*/
+/*---------button to show or hide lyric--------------*/
+/*-----------------------*/
+button.show-lyric {
+    border: none;
+    outline: none;
+    width: 70px;
+    height: 30px;
+    background: #000000b8;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/*-----------------------*/
+/*--------heading of the song video---------------*/
+/*-----------------------*/
+button h3 {
+    margin: 0;
+}
+
+/*-----------------------*/
+/*---------main screen to present video--------------*/
+/*-----------------------*/
+iframe {
+    width: 98%;
+    height: 410px;
+}
+
+/*-----------------------*/
+/*---------scrollbar--------------*/
+/*-----------------------*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+        cursor: pointer;
+    }
+
+img.img-video {
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+div#searchBar {
+    position: relative;
+    left: 18%;
+    margin-bottom: 0.5em;
+}
+
+input#query {
+    outline: none;
+    border: none;
+    padding: 0.3em;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.search-btn {
+    outline: none;
+    border: none;
+    padding: 0.2em;
+    border-radius: 1em;
+    font-weight: bold;
+    color: #2c3e50cf;
+}
+
+.search-btn:hover {
+    cursor: pointer;
+}
